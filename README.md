@@ -17,32 +17,29 @@ A Todo management API built with **Node.js**, **Express 5**, and **TypeScript**,
 
 ---
 
-## Prerequisites
+## Getting started
 
-- **Node.js** >= 18.x
-- **npm** >= 9.x (or pnpm / yarn)
-- **MySQL** >= 8.x — a running MySQL server (local or via Docker)
-
----
-
-## Installation
+### With Docker (recommended)
 
 ```bash
-# 1. Clone the repository
 git clone <https://github.com/EpitechPGE1-2025/G-WEB-200-NCY-2-1-epytodo-1> epytodo
 cd epytodo
-
-# 2. Install dependencies
-npm install
-
-# 3. Set up environment variables
 cp .env.example .env
-# Edit .env with your values (see Environment Variables section below)
+docker compose up
+```
 
-# 4. Initialize the database
+The API will be available at `http://localhost:3000`.
+
+### Without Docker
+
+**Prerequisites:** Node.js >= 18.x, MySQL >= 8.x
+
+```bash
+git clone <https://github.com/EpitechPGE1-2025/G-WEB-200-NCY-2-1-epytodo-1> epytodo
+cd epytodo
+npm install
+cp .env.example .env
 mysql -u root -p < epytodo.sql
-
-# 5. Start the server
 npm start
 ```
 
